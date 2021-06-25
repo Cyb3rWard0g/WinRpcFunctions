@@ -9,7 +9,7 @@ function ROpenServiceW
 
     .DESCRIPTION
 
-    The RStartServiceW method starts a specified service. (Opnum 19)
+    The ROpenServiceW method starts a specified service. (Opnum 19)
 
     .PARAMETER RpcClient
 
