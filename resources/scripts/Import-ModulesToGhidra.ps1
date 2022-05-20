@@ -20,7 +20,6 @@ function Import-ModulesToGhidra {
     # Validate Paths
     $GhidraFolder = Resolve-Path $GhidraFolder -ErrorAction Stop
     $ProjectPath = Resolve-Path $ProjectPath -ErrorAction Stop
-    $ProjectName = Resolve-Path $ProjectName -ErrorAction Stop
     $FilesPath = Resolve-Path $FilesPath -ErrorAction Stop
 
     $GhidraHeadless = "$GhidraFolder\support\\analyzeHeadless.bat"
