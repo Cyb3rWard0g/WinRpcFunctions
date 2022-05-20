@@ -18,8 +18,5 @@ else
     Import-Module NtObjectManager
 }
 
-# Loading New-RpcClientConnection script
-. "$($PSScriptRoot)\New-RpcClientConnection.ps1"
-
 # Importing Functions
-Get-ChildItem $PSScriptRoot | Where-Object { $_.PSIsContainer -and $_.Name -ne 'resources' } | Foreach-Object { Get-ChildItem "$($_.FullName)\*" -Include '*.ps1' } | Foreach-Object { . $_.FullName }
+Get-ChildItem $PSScriptRoot | Where-Object { $_.PSIsContainer -and $_.Name -eq 'scripts' } | Foreach-Object { Get-ChildItem "$($_.FullName)\*" -Include '*.ps1' } | Foreach-Object { . $_.FullName }
